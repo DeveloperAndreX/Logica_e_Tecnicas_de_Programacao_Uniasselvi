@@ -4,9 +4,9 @@
 $nomeEstudante = "Mariana Costa";
 
 // Notas de 0 a 10
-$nota1 = 8.5;
-$nota2 = 7.0;
-$nota3 = 6.0;
+$n1 = 8.5;
+$n2 = 7.0;
+$n3 = 6.0;
 
 // Frequência em porcentagem (de 0 a 100)
 $frequencia = 82; 
@@ -14,7 +14,7 @@ $frequencia = 82;
 // --- PROCESSAMENTO (Cálculos) ---
 
 // Calcula a média aritmética das três notas
-$mediaFinal = ($nota1 + $nota2 + $nota3) / 3;
+$mediaFinal = ($n1 + $n2 + $n3) / 3;
 
 // --- VERIFICAÇÃO DA SITUAÇÃO FINAL ---
 
