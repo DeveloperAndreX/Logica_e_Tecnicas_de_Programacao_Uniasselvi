@@ -1,0 +1,50 @@
+Algoritmo "Calculo_Situacao_Estudante"
+
+Var
+   // --- VARIÁVEIS DE ENTRADA ---
+   nome_estudante : caractere
+   n1, n2, n3 : real
+   frequencia : inteiro
+   
+   // --- VARIÁVEIS DE PROCESSAMENTO E SAÍDA ---
+   media_final : real
+   situacao : caractere
+
+Inicio
+   // --- ENTRADA DE DADOS (Valores de teste) ---
+   nome_estudante <- "Lucas Almeida"
+   n1 <- 6.5
+   n2 <- 7.0
+   n3 <- 5.5
+   frequencia <- 80 // Porcentagem de 0 a 100
+
+   // --- PROCESSAMENTO (Cálculos) ---
+   
+   // Calcula a média aritmética simples das três notas
+   media_final <- (n1 + n2 + n3) / 3
+
+   // --- VERIFICAÇÃO DA SITUAÇÃO FINAL ---
+
+   // Regra 1: Se a frequência for menor que 75, reprova direto por faltas
+   Se (frequencia < 75) Entao
+      situacao <- "Reprovado por Falta"
+   Senao
+      // Regra 2: Se tiver presença, avalia a média das notas
+      Se (media_final >= 7.0) Entao
+         situacao <- "Aprovado"
+      Senao
+         Se (media_final >= 5.0) Entao
+            situacao <- "Recuperação"
+         Senao
+            situacao <- "Reprovado por Nota"
+         FimSe
+      FimSe
+   FimSe
+
+   // --- SAÍDA DE DADOS (Resultado na Tela) ---
+   Escreval("Estudante: ", nome_estudante)
+   Escreval("Média Final: ", media_final:2:1) // Exibe a média com 1 casa decimal
+   Escreval("Frequência: ", frequencia, "%")
+   Escreval("Situação Final: ", situacao)
+
+FimAlgoritmo
